@@ -26,16 +26,17 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
     private Context mContext;
     private Session mSession;
 
-    private String mEmail;
+    private String mEmail,cEmail;
     private String mSubject;
     private String mMessage;
 
     private ProgressDialog mProgressDialog;
 
     //Constructor
-    public JavaMailAPI(Context mContext, String mEmail, String mSubject, String mMessage) {
+    public JavaMailAPI(Context mContext, String mEmail,String cEmail, String mSubject, String mMessage) {
         this.mContext = mContext;
         this.mEmail = mEmail;
+        this.cEmail=cEmail;
         this.mSubject = mSubject;
         this.mMessage = mMessage;
     }
@@ -87,6 +88,8 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
             mm.setFrom(new InternetAddress(Utils.EMAIL));
             //Adding receiver
             mm.addRecipient(Message.RecipientType.TO, new InternetAddress(mEmail));
+            mm.addRecipient(Message.RecipientType.CC, new InternetAddress(cEmail));
+
 
             //Adding subject
             mm.setSubject(mSubject);
