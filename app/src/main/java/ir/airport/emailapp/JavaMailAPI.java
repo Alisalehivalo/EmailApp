@@ -5,12 +5,15 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 import java.util.Properties;
+
+import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 
 public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
@@ -98,9 +101,8 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
             //Sending email
             Transport.send(mm);
 
-//            BodyPart messageBodyPart = new MimeBodyPart();
-//
-//            messageBodyPart.setText(message);
+            //BodyPart messageBodyPart = new MimeBodyPart();
+            //messageBodyPart.setText(message);
 //
 //            Multipart multipart = new MimeMultipart();
 //

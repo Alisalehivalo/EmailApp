@@ -8,4 +8,6 @@
     <color name="adsogn">#6103A9F4</color>
     <color name="body">#1703A9F4</color>
     <color name="dark_blue">#3F51B5</color>
+    <color name="blue">#3F51B5</color>
+    <color name="light_blue">#2196F3</color>
 </resources>

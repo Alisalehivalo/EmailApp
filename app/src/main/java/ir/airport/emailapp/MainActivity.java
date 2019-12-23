@@ -96,7 +96,12 @@ EditText mail,cMail,subject,ads,fltTime,ogN,acIdentification,rules,typeFLT,num,t
         Log.d("FPL",FPL_MSG);
         String txtMail=adress+origin+FPL_MSG+"\n"+"This Message Created on Aeronautical Messaging-Android Application";
         Log.d("txt",txtMail);
-        JavaMailAPI javaMailAPI=new JavaMailAPI(this,addressee,cAddressee,SubjectMail,txtMail);
-        javaMailAPI.execute();
+        if (!cAddressee.isEmpty()) {
+            JavaMailAPI javaMailAPI = new JavaMailAPI(this, addressee, cAddressee, SubjectMail, txtMail);
+            javaMailAPI.execute();
+        }else {
+            JavaMailAPI javaMailAPI = new JavaMailAPI(this, addressee,"akbarsalehi@gmail.com", SubjectMail, txtMail);
+            javaMailAPI.execute();
+        }
     }
 }

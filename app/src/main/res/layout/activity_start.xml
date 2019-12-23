@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#fff"
+    tools:context=".StartActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iac_icon"
+        android:layout_gravity="center"
+        android:id="@+id/img"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Electronic Flight Plan"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/blue"
+        android:textSize="35sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Application"
+        android:textColor="@color/blue"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Created by:"
+        android:textColor="#53338B"
+        android:textSize="20sp"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ali Akbar Salehi"
+        android:textSize="30sp"
+        android:textColor="@color/light_blue"
+        android:layout_marginTop="15dp"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>
