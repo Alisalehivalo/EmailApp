@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class MainActivity extends AppCompatActivity {
 EditText mail,cMail,subject,ads,fltTime,ogN,acIdentification,rules,typeFLT,num,typeAC,wTurbulance,equp1,equp2,dep,timeFlt,speed,level,route1,route2,dest,eet,alt1,alt2,other;
 
@@ -17,7 +18,7 @@ EditText mail,cMail,subject,ads,fltTime,ogN,acIdentification,rules,typeFLT,num,t
         setContentView(R.layout.activity_main);
         mail=findViewById(R.id.email);
         subject=findViewById(R.id.subject);
-        cMail=findViewById(R.id.cEmail);
+        //cMail=findViewById(R.id.cEmail);
         ads=findViewById(R.id.ads);
         fltTime=findViewById(R.id.fillingTime);
         ogN=findViewById(R.id.ogn);
@@ -83,7 +84,7 @@ EditText mail,cMail,subject,ads,fltTime,ogN,acIdentification,rules,typeFLT,num,t
 
     private void sendmail() {
         String addressee=mail.getText().toString().trim();
-        String cAddressee=cMail.getText().toString().trim();
+        //String cAddressee=cMail.getText().toString().trim();
         String SubjectMail=subject.getText().toString().trim();
         String adress="FF "+ads.getText().toString().toUpperCase()+"\n";
         String origin=fltTime.getText().toString()+" "+ogN.getText().toString().toUpperCase()+"\n";
@@ -96,12 +97,12 @@ EditText mail,cMail,subject,ads,fltTime,ogN,acIdentification,rules,typeFLT,num,t
         Log.d("FPL",FPL_MSG);
         String txtMail=adress+origin+FPL_MSG+"\n"+"This Message Created on Aeronautical Messaging-Android Application";
         Log.d("txt",txtMail);
-        if (!cAddressee.isEmpty()) {
-            JavaMailAPI javaMailAPI = new JavaMailAPI(this, addressee, cAddressee, SubjectMail, txtMail);
+        //if (!cAddressee.isEmpty()) {
+            JavaMailAPI javaMailAPI = new JavaMailAPI(this, addressee,  SubjectMail, txtMail);
             javaMailAPI.execute();
-        }else {
-            JavaMailAPI javaMailAPI = new JavaMailAPI(this, addressee,"akbarsalehi@gmail.com", SubjectMail, txtMail);
-            javaMailAPI.execute();
-        }
+        //}else {
+            //JavaMailAPI javaMailAPI = new JavaMailAPI(this, addressee,"akbarsalehi@gmail.com", SubjectMail, txtMail);
+            //javaMailAPI.execute();
+        //}
     }
 }
