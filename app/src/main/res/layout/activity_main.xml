@@ -17,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FLIGHT PLAN Form"
+
         android:textStyle="bold"
         android:textColor="@color/dark_blue"
         android:textSize="35sp"/>
@@ -36,7 +37,8 @@
 
             android:inputType="textEmailAddress"/>
         </LinearLayout>
-        
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,8 +57,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,9 +73,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:hint="Addresees"
-
                 android:id="@+id/ads"/>
             </LinearLayout>
             <LinearLayout
@@ -87,16 +85,14 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:hint="Filing Time"
-
+                    android:inputType="datetime"
                     android:maxLength="6"
-
                     android:id="@+id/fillingTime"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLength="8"
                     android:inputType="text"
-
                     android:hint="OGN"
                     android:id="@+id/ogn"/>
             </LinearLayout>
@@ -109,21 +105,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-
                 android:orientation="horizontal">
                 <TextView
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:text="(FPL-"
                     />
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:maxLength="7"
                     android:background="@drawable/border"
                     android:hint="A/C Ident"
+
                     android:id="@+id/ident"/>
                 <TextView
                     android:textStyle="bold"
@@ -132,22 +128,15 @@
                     android:textSize="20sp"
                     android:text="-"
                     />
-                <EditText
-                    android:background="@drawable/border"
+                <Spinner
+                    android:id="@+id/rules1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="FLT Rules"
-                    android:inputType="text"
-                    android:maxLength="1"
-                    android:id="@+id/rules"/>
-                <EditText
-                    android:background="@drawable/border"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/spin_type"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="TYPE OF FLT"
-                    android:inputType="text"
-                    android:maxLength="1"
-                    android:id="@+id/type"/>
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
             <LinearLayout
@@ -161,21 +150,13 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="-"/>
+
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Num"
-                    android:inputType="number"
-                    android:maxLength="2"
-                    android:id="@+id/num"/>
-                <EditText
-                    android:background="@drawable/border"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Type AC"
-                    android:inputType="text"
-                    android:maxLength="4"
+                    android:layout_height="30dp"
+                    android:hint="Num-Type AC"
+                    android:maxLength="6"
                     android:id="@+id/typeAC"/>
                 <TextView
                     android:textStyle="bold"
@@ -183,14 +164,10 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="/"/>
-                <EditText
-                    android:background="@drawable/border"
+                <Spinner
+                    android:id="@+id/spin_turbulance"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="WTurb"
-                    android:inputType="text"
-                    android:maxLength="1"
-                    android:id="@+id/wTurbulance"/>
+                    android:layout_height="wrap_content"/>
                 <TextView
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
@@ -200,7 +177,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:hint="Equip"
                     android:id="@+id/equip1"/>
                 <TextView
@@ -212,7 +189,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:hint="Equip"
                     android:id="@+id/equip2"/>
 
@@ -231,7 +208,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:inputType="text"
                     android:maxLength="4"
                     android:hint="DEP AD"
@@ -239,9 +216,8 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:hint="Time"
-
                     android:maxLength="4"
                     android:id="@+id/timeFlt"/>
 
@@ -261,7 +237,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:hint="Cruising Speed"
 
                     android:maxLength="5"
@@ -269,7 +245,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:hint="Level"
 
                     android:maxLength="5"
@@ -277,9 +253,8 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:hint="Route"
-
                     android:id="@+id/route1"/>
 
             </LinearLayout>
@@ -290,7 +265,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:hint="Route"
                     android:id="@+id/route2"/>
 
@@ -309,7 +284,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:hint="Dest AD"
                     android:inputType="text"
                     android:maxLength="4"
@@ -317,7 +292,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
 
                     android:maxLength="4"
                     android:hint="Total EET"
@@ -331,7 +306,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:inputType="text"
                     android:maxLength="4"
                     android:hint="Altn AD"
@@ -345,7 +320,7 @@
                 <EditText
                     android:background="@drawable/border"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:inputType="text"
                     android:maxLength="4"
                     android:hint="2nd Altn AD"
@@ -360,26 +335,21 @@
 
                 <EditText
                     android:background="@drawable/border1"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_width="400dp"
+                    android:layout_height="80dp"
                     android:hint="Other Information"
                     android:textAlignment="viewStart"
                     android:id="@+id/other"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:orientation="horizontal">
                 <TextView
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
+                    android:layout_marginLeft="1dp"
+                    android:textSize="25sp"
                     android:text=")"/>
 
             </LinearLayout>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -397,7 +367,7 @@
             <Button
                 android:id="@+id/clear"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:background="@drawable/button"
                 android:text="CLEAR"
                 android:textColor="#fff"
@@ -406,12 +376,14 @@
             <Button
                 android:id="@+id/send"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/button"
                 android:text="SEND"
                 android:textColor="#fff"
                 android:textStyle="bold" />
+
+
         </LinearLayout>
     </LinearLayout>
 
