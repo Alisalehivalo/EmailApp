@@ -218,6 +218,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:hint="Time"
+                    android:inputType="time"
                     android:maxLength="4"
                     android:id="@+id/timeFlt"/>
 
@@ -293,7 +294,7 @@
                     android:background="@drawable/border"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-
+android:inputType="number"
                     android:maxLength="4"
                     android:hint="Total EET"
                     android:id="@+id/eet"/>

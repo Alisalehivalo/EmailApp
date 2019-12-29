@@ -64,12 +64,47 @@ EditText mail,cMail,subject,ads,fltTime,ogN,acIdentification,typeAC,equp1,equp2,
         other=findViewById(R.id.other);
         Button send=findViewById(R.id.send);
         Button clear=findViewById(R.id.clear);
+
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendmail();
+                if (mail.getText().toString().trim().equalsIgnoreCase("")) {
+
+                    mail.setError("Please enter Email addresses,This field can not be blank");
+                } else if (subject.getText().toString().trim().equalsIgnoreCase("")) {
+                    subject.setError("Please enter Subject,This field can not be blank");
+                } else if (ads.getText().toString().trim().equalsIgnoreCase("")) {
+                    ads.setError("Please enter AFTN addresses,This field can not be blank");
+                } else if (fltTime.getText().toString().trim().equalsIgnoreCase("")) {
+                    fltTime.setError("Please enter Filled Time,This field can not be blank");
+                } else if (ogN.getText().toString().trim().equalsIgnoreCase("")) {
+                    ogN.setError("Please enter OGN AFTN address,This field can not be blank");
+                } else if (acIdentification.getText().toString().trim().equalsIgnoreCase("")) {
+                    acIdentification.setError("Please enter A/C Identification,This field can not be blank");
+                } else if (typeAC.getText().toString().trim().equalsIgnoreCase("")) {
+                    typeAC.setError("Please enter type of A/C,This field can not be blank");
+                } else if (equp1.getText().toString().trim().equalsIgnoreCase("")) {
+                    equp1.setError("Please enter Equipment on-board,This field can not be blank");
+                } else if (dep.getText().toString().trim().equalsIgnoreCase("")) {
+                    dep.setError("Please enter DEP AD AFTN Location indicator,This field can not be blank");
+                } else if (timeFlt.getText().toString().trim().equalsIgnoreCase("")) {
+                    timeFlt.setError("Please enter Time of Flight,This field can not be blank");
+                } else if (speed.getText().toString().trim().equalsIgnoreCase("")) {
+                    speed.setError("Please enter Speed,This field can not be blank");
+                } else if (level.getText().toString().trim().equalsIgnoreCase("")) {
+                    level.setError("Please enter Cruise level,This field can not be blank");
+                } else if (route1.getText().toString().trim().equalsIgnoreCase("")) {
+                    route1.setError("Please enter Route of Flight,This field can not be blank");
+                } else if (dest.getText().toString().trim().equalsIgnoreCase("")) {
+                    dest.setError("Please enter DEST AD AFTN Location indicator,This field can not be blank");
+                } else if (eet.getText().toString().trim().equalsIgnoreCase("")) {
+                    eet.setError("Please enter EET,This field can not be blank");
+                } else {
+                    sendmail();
+                }
             }
         });
+
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,7 +151,7 @@ EditText mail,cMail,subject,ads,fltTime,ogN,acIdentification,typeAC,equp1,equp2,
                 "-"+dest.getText().toString().toUpperCase()+eet.getText().toString()+" "+alt1.getText().toString().toUpperCase()+" "+alt2.getText().toString().toUpperCase()+"\n"+
                 "-"+other.getText().toString().toUpperCase()+")"+"\n";
         Log.d("FPL",FPL_MSG);
-        String txtMail=adress+origin+FPL_MSG+"\n"+"This Message Created on Aeronautical Messaging-Android Application";
+        String txtMail=adress+origin+FPL_MSG+"\n"+"This Message Created on Aeronautical Messaging Android Application";
         Log.d("txt",txtMail);
         //if (!cAddressee.isEmpty()) {
             JavaMailAPI javaMailAPI = new JavaMailAPI(this, addressee,  SubjectMail, txtMail);
